@@ -1,0 +1,49 @@
+.headercontainer{
+    margin: 0;
+    width: auto;
+    height:80px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background-color: black; 
+}
+.logo{
+    position: absolute;
+    left: 80px;
+    color: white;
+    font-weight: bold;
+}
+.inputflexbox{
+    display: flex;    
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;    
+    border-top-right-radius: 20px ;
+    border-top-left-radius: 20px ;
+    border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px ;
+    align-items: center;
+    min-width: 180px;
+    width: 200px;      
+    background-color: #2a2e39;
+    width: 400px;
+    height: 38px;    
+}
+.searchicon{    
+    display: flex;
+    justify-content: flex-right;      
+    color: #868993;
+    padding-right: 3px;
+}
+input{
+    background-color: #2a2e39;    
+    outline: none;
+    border: 0;
+    padding: 0px 0px 0px 15px;
+    color: white;    
+    font-size: 14px;
+    width: 350px;
+}
+input::placeholder{
+    color: #868993;        
+}

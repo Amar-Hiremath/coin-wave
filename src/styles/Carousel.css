@@ -1,0 +1,45 @@
+.carouselItem {
+    display: grid;
+    height: 100px;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;    
+    justify-content: center;
+    gap: 10px;
+    font-size: smaller;
+    font-weight: 14px;
+    align-items: center;
+}
+
+.flexContainerMain {
+    display: grid;
+    justify-content: flex-start;
+    border: 1px solid black;
+    display: flex;    
+    align-items: center;
+    gap: 10px;
+    font-size: smaller;
+    font-weight: 14px;
+    width: 200px;
+    text-decoration: none;
+}
+
+.flexContainerMain img {
+    height: 40px;
+    object-fit: contain;
+    padding: 10px 0px 0px 10px;
+}
+
+.flexboxright {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.miniFlexBox {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+}
