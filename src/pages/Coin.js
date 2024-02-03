@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-function Coin() {
+function Coin() {  
   return (
-    <div>Coin</div>
+    <>Coin</>    
   )
 }
 

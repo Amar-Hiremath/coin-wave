@@ -1,0 +1,135 @@
+.LeftNavBar-container {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background-color: #181818;
+}
+
+.LeftNavBar-rightContainer {
+    flex: 1 30%;
+    background-color: #181818;
+    margin-left: 15px
+}
+
+.LeftNavBar-leftContainer {
+    background-color: #181818;
+    border-right: 1px solid rgba(67, 63, 63, 0.47);
+}
+
+
+.mainContainer {
+
+    color: rgba(255, 255, 255, 0.897);
+    display: flex;
+    margin: 40px 0px 0px 0px;
+
+
+}
+
+.Equity {
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+.box1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+
+}
+
+.box2 {
+    font-size: 12px;
+    color: rgb(121, 119, 119);
+}
+
+.Equity-section {
+    border-bottom: 1px solid rgb(61, 59, 59);
+    padding-bottom: 80px;
+}
+
+.left-shadow-box {
+    border-bottom: 1px solid rgb(61, 59, 59);
+    display: flex;
+    align-items: center;
+}
+
+.LeftNavBar-inputbox {
+    position: relative;
+    max-width: 400px;
+    width: 400px;
+    min-width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    height: 25px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.seachIcon-portfolio {
+    display: flex;
+    margin-left: 15px;
+}
+
+.LeftNavBar-inputbox::placeholder {
+    color: rgb(121, 119, 119);
+    /* Placeholder text color */
+    font-size: 12px;
+}
+
+.usersName {
+    color: rgba(255, 255, 255, 0.897);
+    margin: 30px 0px 0px 0px;
+    border-bottom: 1px solid rgb(61, 59, 59);
+    font-size: 25px;
+    padding-bottom: 20px;
+
+}
+
+.a {
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.897);
+    border-right: 1px solid rgb(61, 59, 59);
+    padding-right: 50px;
+}
+
+.b {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.box-b {
+    color: rgba(255, 255, 255, 0.68);
+    margin-left: 15px;
+    font-size: 15px;
+}
+
+.box2 {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+
+.flexbox-portfolio {
+    display: flex;
+    color: rgb(121, 119, 119);
+    font-size: 12px;
+    align-items: center;
+}
+.search-div {
+    flex: 1;
+    color: rgb(121, 119, 119);
+    font-size: 12px;
+    margin-top: 660px;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+    z-index: 9999; /* Set a high z-index value */
+    position: absolute; /* Ensure the z-index works by setting a position */
+}
+.search-item{
+    margin:10px 10px 10px 10px
+}

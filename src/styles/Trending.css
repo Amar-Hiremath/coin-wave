@@ -1,0 +1,90 @@
+.main-Trending-container {
+    /* display: flex; */
+    align-items: center;
+    overflow: hidden;
+    height: 200px ;
+    width: 400px;
+    /* outline: 1px solid white; */
+    margin-left: 10px;
+}
+h4{
+    text-align: center;
+    margin: 0;
+    margin-top: 15px;
+}
+
+.heroChart {
+    width: auto;
+    height: 400px;
+}
+
+.slider-icon-left {
+    background-color: white;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    justify-content: center;
+    display: grid;
+    align-items: center;
+}
+
+.slider-icon-right {
+    background-color: white;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    justify-content: center;
+    display: grid;
+    align-items: center;
+}
+
+.slider-icon-right:hover svg,
+.slider-icon-left:hover svg {
+    color: rgb(5, 5, 252);
+
+}
+
+.card-container {
+    /* margin-left: 60px; */
+    margin: 5px 0px 5px 0px ;
+    border-radius: 15px;
+}
+
+#trending-card-flexContainer {
+    
+    height: 100%;
+    width: 100%;
+    /* display: flex; */
+    overflow: visible;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+#trending-card-flexContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.selected-coin {
+    background-color: #3a3a3a;
+    box-shadow: 0 4px 8px rgba(0.9, 0.9, 0.9, 0.5);
+
+}
+
+.unpickedCoinId:hover {
+    background-color: rgba(53, 55, 55, 0.683);
+}
+.day-percentage-change{
+    color:white;
+    display: flex;
+    /* padding-left: 40px; */
+
+}

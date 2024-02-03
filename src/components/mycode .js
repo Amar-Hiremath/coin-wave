@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import useAxios from "../Hooks/useAxios";
 
 import {
@@ -27,19 +27,13 @@ ChartJS.register(
   Legend
 );
 
-function HeroChart({ coinId }) {
-  // Axios fetching
+const HeroChart = ({ coinId }) => {
   const { response, loading, error } = useAxios(
     `coins/${coinId}/market_chart?vs_currency=usd&days=7`
   );
 
-  //useState hook
   const [coinChartData, setCoinChartData] = useState([]);
 
-  //useEffect hook 1
-  //fetching trending coin api's
-
-  //useEffect hook 2
   useEffect(() => {
     if (!loading && response) {
       const chartData = response.prices.map((value) => ({
@@ -48,14 +42,16 @@ function HeroChart({ coinId }) {
       }));
       setCoinChartData(chartData);
     }
-  }, [response, loading]);
+  }, [loading, response]);
 
-  if (loading) {
-    return <h4>Chart Loading...</h4>;
+  if (loading || !response) {
+    // Display loading message or handle the case when response is not available yet
+    return <h4>Loading...</h4>;
   }
 
   if (error) {
-    return <h4>Error Fetching Data : {error.message}</h4>;
+    // Display error message
+    return <div>Error fetching chart data: {error.message}</div>;
   }
 
   const options = {
@@ -66,19 +62,16 @@ function HeroChart({ coinId }) {
     labels: coinChartData.map((value) => moment(value.x).format("MMMDD")),
     datasets: [
       {
-        fill: false,
+        fill: true,
         label: coinId,
         data: coinChartData.map((val) => val.y),
-        borderColor: "green",
-        backgroundColor: "rgba(0, 225, 0, 0.3)",
+        borderColor: "rgb(53, 162,235)",
+        backgroundColor: "rgba(53, 162, 235, 0.5)",
       },
     ],
   };
-  return (
-    <>
-      <Line options={options} data={data}></Line>
-    </>
-  );
-}
+
+  return <Line options={options} data={data} />;
+};
 
 export default HeroChart;

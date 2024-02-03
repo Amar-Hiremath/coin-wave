@@ -1,0 +1,8 @@
+.largestGainers-mainContainer{
+    align-items: center;
+    overflow: hidden;
+    height: 200px ;
+    width: 400px;
+    /* outline: 1px solid white; */
+    margin-left: 10px;
+}
