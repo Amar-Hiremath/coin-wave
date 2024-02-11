@@ -23,13 +23,11 @@ function LargestGainers({ response, loading, error }) {
           (a, b) =>
             b.price_change_percentage_24h - a.price_change_percentage_24h
         );
-        console.log(sortedCoins);
         const topSixGainers = sortedCoins.slice(0, 6);
         setLargestCoins(topSixGainers);
 
         if (topSixGainers && topSixGainers.length > 0) {
           setSelectedCoinId(topSixGainers[0].id);
-          console.log("top six gainers: ", topSixGainers);
         }
       }
     };

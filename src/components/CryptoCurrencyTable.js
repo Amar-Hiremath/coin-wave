@@ -10,7 +10,6 @@ const CryptoCurrencyTable = ({ response, loading, error }) => {
   if (response) {
     const sortedCoins = response.sort((a, b) => b.market_cap - a.market_cap);
     topCoins = sortedCoins;
-    console.log(response);
   }
   return (
     <>
@@ -26,6 +25,8 @@ const CryptoCurrencyTable = ({ response, loading, error }) => {
         <section>
           {topCoins.map((coinM, index) => (
             <TableComponent
+              error={error}
+              response={response}
               key={coinM.id}
               coinM={coinM}
               serialNumber={index + 1}

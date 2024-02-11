@@ -27,7 +27,6 @@ function TopLoosers({ response, loading, error }) {
 
         if (topSixLoosers && topSixLoosers.length > 0) {
           setSelectedCoinId(topSixLoosers[0].id);
-          console.log("top six gainers: " ,topSixLoosers)
         }
       }
       

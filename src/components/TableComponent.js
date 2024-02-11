@@ -1,12 +1,12 @@
 import "../styles/CapRanking.css";
+import MiniChart from "./MiniChart";
 
-const TableComponent = ({ coinM , serialNumber}) => {  
-
+const TableComponent = ({ error, response, coinM, serialNumber }) => {
   const priceChangeSign = coinM.price_change_percentage_24h > 0 ? "+" : "-";
   return (
     <div className="cap-ranking-mainContainer">
       <div className="capRanking-div1">
-      {serialNumber}
+        {serialNumber}
         <img className="CRimg" alt={`${coinM.id}`} src={`${coinM.image}`} />
 
         <div className="capRanking-flexbox-div1">
@@ -26,9 +26,11 @@ const TableComponent = ({ coinM , serialNumber}) => {
         </div>
         <div>
           {priceChangeSign}
-          
           {Math.abs(coinM.price_change_percentage_24h)}%
         </div>
+      </div>
+      <div>
+        <MiniChart coinM = {coinM} />
       </div>
     </div>
   );
