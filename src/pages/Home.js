@@ -3,9 +3,10 @@ import Trending from "../components/Trending";
 import Header from "../components/Header";
 import "../styles/Home.css";
 import LargestGainers from "../components/LargestGainers";
-import TopLoosers from "../components/TopLoosers"
+import TopLoosers from "../components/TopLoosers";
 import useAxios from "../Hooks/useAxios";
 import CryptoCurrencyTable from "../components/CryptoCurrencyTable";
+import MiniChart from "../components/MiniChart";
 
 function Home() {
   const { response, loading, error } = useAxios(
@@ -15,26 +16,17 @@ function Home() {
   return (
     <div className="Home">
       <Header />
+      <MiniChart />
       <div className="flex-box">
-        <Trending /> {/* search/trending : only 15 coins are been fetched */}
-        <LargestGainers
-          response={response}
-          loading={loading}
-          error={error}
-        />
-          <TopLoosers
-          response={response}
-          loading={loading}
-          error={error}
-        />
-        {/*  all crypto coins Api */}
+        <Trending />
+        <LargestGainers response={response} loading={loading} error={error} />
+        <TopLoosers response={response} loading={loading} error={error} />
       </div>
       <CryptoCurrencyTable
         response={response}
         loading={loading}
         error={error}
       />
-      {/*  all crypto coins Api */}
     </div>
   );
 }
