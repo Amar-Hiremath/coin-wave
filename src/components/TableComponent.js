@@ -1,7 +1,14 @@
 import "../styles/CapRanking.css";
-import MiniChart from "./MiniChart";
+import React from "react";
+import MiniChart from "./MiniChart"; //
 
 const TableComponent = ({ error, response, coinM, serialNumber }) => {
+  let sevenDaysData = [];
+  if (coinM.sparkline_in_7d && coinM.sparkline_in_7d.price) {
+    sevenDaysData = coinM.sparkline_in_7d.price;
+  }
+  console.log( coinM.sparkline_in_7d.price[0])
+  console.log( coinM)
   const priceChangeSign = coinM.price_change_percentage_24h > 0 ? "+" : "-";
   return (
     <div className="cap-ranking-mainContainer">
@@ -30,7 +37,7 @@ const TableComponent = ({ error, response, coinM, serialNumber }) => {
         </div>
       </div>
       <div>
-        <MiniChart coinM = {coinM} />
+        <MiniChart data={sevenDaysData} />
       </div>
     </div>
   );
