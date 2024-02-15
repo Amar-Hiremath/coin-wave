@@ -1,0 +1,56 @@
+/* HEADING  */
+.heroTable-heading {
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  inline-size: fit-content;
+
+}
+
+#cryptoMarket-Link {
+  display: inline-block;
+  width: fit-content;
+}
+
+
+/* TABLE MAIN CONTAINER  */
+.HeroTable-MainContainer {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+}
+/* Row */
+tr{
+  height: 200px;
+}
+
+/* COLUMN - 2 */
+
+/* HEADING  */
+.Herotable-headingColumn2{
+  display: flex;
+  justify-content:flex-start;
+}
+/* IMAGE-NAME-SYMBOL (flex-box) */
+.Col2-img-name-symbol {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  gap: 20px;
+}
+/* IMAGE  */
+.Col2-img-name-symbol img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+/* COIN NAME & SYMBOL (Flex box)  */
+.column2-name-symbol{
+  display: flex;
+  gap: 10px;
+}
+/* COIN NAME  */
+.column2-coinName{
+  font-weight: bold;
+}

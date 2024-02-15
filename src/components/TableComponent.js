@@ -1,45 +1,75 @@
-import "../styles/CapRanking.css";
 import React from "react";
-import MiniChart from "./MiniChart"; //
+import MiniChart from "./MiniChart";
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const TableComponent = ({ error, response, coinM, serialNumber }) => {
   let sevenDaysData = [];
+  let symbolWord = coinM.symbol.toUpperCase();
+  let currentPrice = "$" + coinM.current_price.toLocaleString();
+  let priceChange24h = Math.abs(coinM.price_change_percentage_24h);
+  let formatedPriceChange24h = priceChange24h.toFixed(1);
+  
+  // const priceChangeSign = coinM.price_change_percentage_24h > 0 ? "+" : "-" ;
+
   if (coinM.sparkline_in_7d && coinM.sparkline_in_7d.price) {
     sevenDaysData = coinM.sparkline_in_7d.price;
   }
-  console.log( coinM.sparkline_in_7d.price[0])
-  console.log( coinM)
-  const priceChangeSign = coinM.price_change_percentage_24h > 0 ? "+" : "-";
+
   return (
-    <div className="cap-ranking-mainContainer">
-      <div className="capRanking-div1">
-        {serialNumber}
-        <img className="CRimg" alt={`${coinM.id}`} src={`${coinM.image}`} />
+    <table className="HeroTable-MainContainer">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Coin</th>
+          <th>Price</th>
+          <th>24h</th>
+          <th>24h Volume</th>
+          <th>Market Cap</th>
+          <th>Last 7 Days</th>
+        </tr>
+      </thead>
 
-        <div className="capRanking-flexbox-div1">
-          <p>{coinM.name}</p>
-        </div>
+      {/* serialnumber  */}
+      <div className="Colm1-SerialNumber"> {serialNumber}</div>
+
+      {/* image  */}
+      <img
+        className="Colm2-CoinImg"
+        alt={`${coinM.id}`}
+        src={`${coinM.image}`}
+      />
+
+      {/* Coin Name & Symbol  */}
+      <div className="">
+        <p>{coinM.name}</p>
+        <p>{symbolWord}</p>
       </div>
 
-      <div className="capRanking-div2">
-        {coinM.market_cap}
-        <p className="usdFont">USD</p>
-      </div>
-
-      <div className="capRanking-div3">
-        <div className="capRanking-div3-flexbox1">
-          {coinM.current_price}
-          <p className="usdFont">USD</p>
-        </div>
+      {/* price section */}
+      <div className="">
+        <div className="">{currentPrice}</div>
         <div>
-          {priceChangeSign}
-          {Math.abs(coinM.price_change_percentage_24h)}%
+          {coinM.price_change_percentage_24h > 0 ? (
+            <ArrowDropUpIcon sx={{ color: "green" }} />
+          ) : (
+            <ArrowDropDownIcon sx={{ color: "red" }} />
+          )}
+          {formatedPriceChange24h + "%"}
         </div>
       </div>
+
+      {/* Total Volume       */}
+      <div className="">{"$" + coinM.total_volume.toLocaleString()}</div>
+
+      {/* MarketCap  */}
+      <div className="">{"$" + coinM.market_cap.toLocaleString()}</div>
+
+      {/* Minichart      */}
       <div>
         <MiniChart data={sevenDaysData} />
       </div>
-    </div>
+    </table>
   );
 };
 
