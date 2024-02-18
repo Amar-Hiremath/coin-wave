@@ -20,11 +20,13 @@ function Home() {
         <LargestGainers response={response} loading={loading} error={error} />
         <TopLoosers response={response} loading={loading} error={error} />
       </div>
-      <CryptoCurrencyTable
-        response={response}
-        loading={loading}
-        error={error}
-      />
+      <div className="CryptoCurrencyTable-Component">
+        <CryptoCurrencyTable
+          response={response}
+          loading={loading}
+          error={error}
+        />
+      </div>
     </div>
   );
 }

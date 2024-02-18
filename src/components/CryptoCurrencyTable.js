@@ -49,10 +49,12 @@ const CryptoCurrencyTable = ({ response, loading, error }) => {
               const formattedPriceChange24h = priceChange24h.toFixed(1);
 
               return (
-                <tr key={index} className="rows">
+                <tr
+                key={index} className="rows">
                   {" "}
                   {/* Set row height */}
-                  <td className="Col1-SerialNumber">{index + 1}</td>
+                  <td 
+                  className="Col1-SerialNumber">{index + 1}</td>
                   <td className="Col2-img-name-symbol">
                     <td>
                       <img
@@ -83,8 +85,7 @@ const CryptoCurrencyTable = ({ response, loading, error }) => {
                   <td>{"$" + coinM.market_cap.toLocaleString()}</td>
                   {/* MiniChart */}
                   <td>
-                      <MiniChart
-                      data={coinM.sparkline_in_7d?.price} />
+                    <MiniChart data={coinM.sparkline_in_7d?.price} />
                   </td>
                 </tr>
               );

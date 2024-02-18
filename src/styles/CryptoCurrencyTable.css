@@ -14,12 +14,19 @@
 
 
 /* TABLE MAIN CONTAINER  */
-.HeroTable-MainContainer {
+.HeroTable-MainContainer{
   text-align: center;
   height: 100%;
-  width: 100%;
+  width:100%;
+  border-collapse: collapse;
 }
 
+/* ROW HEADING  */
+.HeroTable-MainContainer thead tr{
+  border-bottom:1px solid  rgb(197, 193, 193) ;
+  background-color: rgb(153, 255, 0);
+  height: 100px;
+}
 
 
 /* COLUMN - 2 */
@@ -59,6 +66,7 @@
 /* ROW  */
 .rows {
   height: 100px;
+  border-bottom: 1px solid rgb(197, 193, 193);
 }
 
 /* MINICHART */
