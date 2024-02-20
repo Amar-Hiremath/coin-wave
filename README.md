@@ -1,2 +1,2 @@
 It's a React powered Crypto Coin investment web aap , currently in progress...
-Link : "https://65d4f00c0c82230008292650--heartfelt-swan-f3f066.netlify.app/"
+Link : https://65d4f00c0c82230008292650--heartfelt-swan-f3f066.netlify.app/
