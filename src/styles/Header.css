@@ -1,62 +1,44 @@
+.fontHeading {
+  font-family: 'Pacifico';
+  font-size: 24px; 
+}
+
 .headercontainer {
-    margin: 0;
-    width: auto;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-  }
-  
-  .logo {
-    position: absolute;
-    left: 80px;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .inputflexbox {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 20px; 
-    align-items: center;
-    min-width: 180px;
-    width: 400px;
-    background-color: #2a2e39;
-    height: 38px;
-  }
-  
-  .searchicon {
-    display: flex;
-    color: #868993;
-    padding-right: 3px;
-  }
-  
-  input {
-    background-color: #2a2e39;
-    outline: none;
-    border: 0;
-    padding: 0px 0px 0px 15px;
-    color: white;
-    font-size: 14px;
-    width: calc(100% - 30px); 
-  }
-  
-  input::placeholder {
-    color: #868993;
-  }
-  
-  .portfolio {
-    position: absolute;
-    left: 880px;
-    color: white;   
-    font-size: 15px; 
-  }
-  
-  a {
-    text-decoration: none;
-    color: white; 
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid #F47340;
+  background-color: antiquewhite;
+}
+
+.logo {
+  margin-left: 10%;
+  justify-content: center;
+  display: flex;
+  color: white;
+  font-weight: bold;
+  width: 65px;
+  height: 100px;
+  z-index: 1;
+}
+
+.logo img {
+  width: 100px;
+  height: 110px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.portfolio {  
+  display: flex;
+  padding-right: 10%; /* Check if this padding is necessary */
+}
+
+.portfolio a {
+  text-decoration: none;
+  color: rgb(36, 36, 36);
+}

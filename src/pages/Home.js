@@ -1,9 +1,9 @@
 import React from "react";
-import Trending from "../components/Trending";
+// import Trending from "../components/Trending";
 import Header from "../components/Header";
 import "../styles/Home.css";
-import LargestGainers from "../components/LargestGainers";
-import TopLoosers from "../components/TopLoosers";
+// import LargestGainers from "../components/LargestGainers";
+// import TopLoosers from "../components/TopLoosers";
 import useAxios from "../Hooks/useAxios";
 import CryptoCurrencyTable from "../components/CryptoCurrencyTable";
 
@@ -15,11 +15,11 @@ function Home() {
   return (
     <div className="Home">
       <Header />
-      <div className="flex-box">
+      {/* <div className="flex-box">
         <Trending />
         <LargestGainers response={response} loading={loading} error={error} />
         <TopLoosers response={response} loading={loading} error={error} />
-      </div>
+      </div> */}
       <div className="CryptoCurrencyTable-Component">
         <CryptoCurrencyTable
           response={response}

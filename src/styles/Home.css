@@ -1,9 +1,16 @@
-.flex-box{
+.flex-box {
     display: flex;
 }
-.CryptoCurrencyTable-Component{
-    padding-right:20px;
-    padding-left:20px;
-    padding-bottom:90px;
-    min-width: 400px;
+
+.CryptoCurrencyTable-Component {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 90px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.Home {
+    width: 100%;
 }

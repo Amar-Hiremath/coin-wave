@@ -3,8 +3,9 @@ import Chart from "chart.js/auto";
 
 // CSS styles for the MiniChart component
 const chartStyles = {
-  height: "100%", // Set the height of the chart container to 100% of its parent's height
-  width: "100%", // Set the width of the chart container to 100% of its parent's width
+  height: "100%",
+  width: "100%", 
+  display: "flex"
 };
 
 const performanceColor = (data) => {
