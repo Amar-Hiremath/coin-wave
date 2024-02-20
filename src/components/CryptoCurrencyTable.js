@@ -2,7 +2,6 @@ import React from "react";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
-import { Link } from "react-router-dom";
 import MiniChart from "./MiniChart";
 import "../styles/CryptoCurrencyTable.css";
 
